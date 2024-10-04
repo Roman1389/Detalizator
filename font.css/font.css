@@ -1,0 +1,208 @@
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("../font/BebasNeueBold.woff") format("woff"),
+		url("../font/BebasNeueBold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Bebas Neue";
+	src: url("../font/BebasNeueRegular.woff") format("woff"),
+		url("../font/BebasNeueRegular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("../font/Montserrat-Regular.woff") format("woff"),
+		url("../font/Montserrat-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Стили для заголовков и текста */
+h1.title-primary {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 700; /* Bold */
+	font-size: 68px; /* Размер шрифта для заголовка */
+	color: #c91f19; /* Цвет для заголовка */
+}
+
+p.subtitle {
+	font-family: "Bebas Neue", sans-serif;
+	font-weight: 400; /* Regular */
+	font-size: 42px; /* Размер шрифта для подзаголовка */
+	color: #87898a; /* Цвет подзаголовка */
+}
+
+p.main-text {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400; /* Regular */
+	font-size: 18px; /* Размер шрифта для основного текста */
+	color: #ffffff; /* Цвет основного текста */
+	line-height: 1.6; /* Увеличиваем межстрочное расстояние для читабельности */
+}
+
+/* Общие стили для заголовков */
+.common-title {
+	font-family: "Bebas Neue", sans-serif; /* Подключенный шрифт */
+	font-size: 68px; /* Размер шрифта */
+	font-weight: bold; /* Жирный шрифт */
+	margin-bottom: 0; /* Убираем нижний отступ */
+}
+
+/* Раздел акции */
+
+.special-heading {
+	font-family: "Bebas Neue", sans-serif; /* Шрифт Bebas Neue */
+	font-size: 68px; /* Размер шрифта */
+	font-weight: bold; /* Жирный шрифт */
+	color: #c91f19; /* Цвет шрифта */
+	margin: 0; /* Убираем отступы, если нужно */
+}
+
+h2.special-heading {
+	color: #c91f19; /* Цвет текста для "УСЛУГИ" */
+	text-transform: uppercase; /* Верхний регистр */
+}
+
+/* НАШИ УСЛУГИ */
+.our-title {
+	color: #7a7b7c; /* Цвет шрифта для "НАШИ" */
+	margin-right: 5px;
+}
+
+/* Раздел вопросы и номер телефона */
+
+p.question-text {
+	font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+	font-weight: 400; /* Regular */
+	font-size: 14px; /* Размер шрифта */
+	color: #2d2d2d; /* Цвет текста */
+	margin-bottom: 0; /* Убираем нижний отступ */
+	margin-left: 0.5rem; /* Отступ справа */
+	margin-right: 0.5rem; /* Отступ справа */
+}
+
+p.question {
+	font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+	font-weight: 400; /* Regular */
+	font-size: 14px; /* Размер шрифта */
+	color: #fff; /* Цвет текста */
+	margin-bottom: 0; /* Убираем нижний отступ */
+	margin-left: 0.5rem; /* Отступ справа */
+	margin-right: 0.5rem; /* Отступ справа */
+}
+
+.brand-text {
+	color: #8e8e8e; /* Цвет текста */
+	text-align: right; /* Выравнивание текста по правому краю */
+	font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+	font-weight: 400; /* Regular */
+	font-size: 15px; /* Размер шрифта */
+	letter-spacing: 5px; /* Межбуквенное расстояние */
+	margin-top: 1px;
+}
+
+.price-info-text {
+	color: #8e8e8e; /* Цвет текста */
+	text-align: left; /* Выравнивание текста по левому краю */
+	font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+	font-weight: 400; /* Regular */
+	font-size: 12px; /* Размер шрифта */
+	margin-top: 5px; /* Отступ сверху */
+}
+
+/* Карточки и слайдер*/
+.card-title {
+	font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+	font-weight: 700; /* Medium */
+	font-size: 12px; /* Размер шрифта */
+	color: #000000;
+	margin-bottom: 0; /* Убираем отступы, если нужно */
+}
+
+.btn-link-custom {
+	font-family: "Montserrat", sans-serif; /* Используем шрифт Montserrat */
+	font-weight: 400; /* Regular */
+	font-size: 15px; /* Размер шрифта */
+	color: #6a6a6a; /* Цвет текста */
+	text-align: left; /* Выравнивание по левому краю */
+}
+
+.custom-paragraph {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400; /* Regular */
+	font-size: 10px;
+	color: #6a6a6a;
+	min-height: 20px;
+}
+
+.btn-custom {
+	display: block; /* Занимает всю ширину контейнера */
+	width: 100%; /* Ширина 100% */
+	background-color: #c5211e; /* Цвет фона */
+	color: #fff; /* Цвет текста */
+	font-family: "Montserrat", sans-serif; /* Шрифт */
+	font-weight: 500; /* Medium */
+	font-size: 16px; /* Размер шрифта */
+	text-align: center; /* Центрирование текста */
+	padding: 10px; /* Отступы внутри кнопки */
+	border: none; /* Без границы */
+	border-radius: 5px; /* Закругленные углы */
+	transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.btn-custom:hover {
+	background-color: #d63e2e; /* Цвет при наведении (чуть ярче) */
+}
+
+.contact-title {
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.contact-value {
+	font-family: "Montserrat", sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.custom-card-title {
+	font-family: "Montserrat", sans-serif; /* Шрифт Montserrat */
+	font-weight: 700; /* Medium */
+	font-size: 12px; /* Размер шрифта */
+	color: #000000;
+	margin-bottom: 0; /* Убираем отступы, если нужно */
+}
+
+/*Шрифты при адаптации*/
+
+/*Шапка*/
+
+@media (max-width: 768px) {
+	h1.title-primary {
+		font-size: 38px; /* Размер шрифта для мобильных устройств */
+	}
+	p.subtitle {
+		font-size: 22px; /* Размер шрифта для подзаголовка */
+	}
+	p.main-text {
+		font-size: 12px;
+	}
+	.question-text, /* Скрываем блок с вопросами и номером телефона */
+    .brand-text,
+	 .promo-contact {
+		/* Скрываем текст D E T A Л И З А Т О R */
+		display: none !important;
+	}
+	.special-heading {
+		font-size: 38px;
+	}
+	.our-title {
+		font-size: 38px;
+	}
+}

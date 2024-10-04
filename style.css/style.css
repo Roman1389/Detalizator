@@ -1,0 +1,561 @@
+/* Header секция */
+.header {
+	background: url("../images/25.png") no-repeat center center;
+	background-size: cover;
+	color: white;
+	padding: 50px 0;
+	overflow-x: hidden;
+	margin-top: -10px;
+}
+
+.header .container,
+.header h1,
+.header p,
+.header a {
+	position: relative;
+	z-index: 2; /* Контент поверх затемнения */
+}
+
+/* Отменяем затемнение для блока с картой */
+.route-container {
+	position: relative;
+	z-index: 3; /* Поверх затемнения */
+}
+
+.route-container img {
+	width: 25px; /* Размер иконки карты */
+	margin-right: 10px; /* Отступ справа */
+}
+
+.route-container a {
+	color: white;
+	text-decoration: none;
+}
+
+.route-container a:hover {
+	color: #ccc; /* Изменение цвета при наведении */
+}
+
+/* Логотип и другие элементы */
+.logo-container {
+	max-width: 200px;
+}
+
+.header img {
+	width: auto;
+	height: 50px;
+}
+
+.header img.me-2 {
+	width: 25px; /* Размер иконки карты */
+	margin-right: 10px; /* Отступ справа */
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+}
+
+.header a:hover {
+	color: #ccc; /* Изменение цвета при наведении */
+}
+
+.burger-menu {
+	width: 30px; /* Ширина иконки бургер-меню */
+}
+
+.burger-menu:hover {
+	filter: brightness(1.2); /* Лёгкое осветление при наведении */
+}
+
+.header .text-end {
+	text-align: right;
+}
+
+.header .text-end .small {
+	font-size: 12px;
+	margin-bottom: 5px; /* Отступ между "Автосервис" и номером телефона */
+}
+
+.header .fw-bold {
+	font-weight: bold; /* Жирный текст для номера телефона */
+}
+
+.header h1,
+.header p {
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.map-icon {
+	width: 50px; /* Устанавливаем нужную ширину */
+	filter: brightness(1.2) saturate(1.5); /* Увеличиваем яркость и насыщенность */
+}
+
+.logo-container img,
+.route-container img,
+.text-end a {
+	transition: transform 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.logo-container img:hover {
+	transform: scale(1.05); /* Увеличение логотипа */
+}
+
+.route-container img:hover {
+	transform: scale(1.1); /* Увеличение иконки карты */
+}
+
+.text-end a:hover {
+	color: #ffcc00; /* Изменение цвета номера телефона на желтый */
+	text-decoration: underline; /* Подчеркивание текста */
+}
+
+/* Стили для кнопки */
+.oval-btn {
+	display: inline-block;
+	padding: 10px 20px;
+	color: white;
+	background: linear-gradient(
+		135deg,
+		#333333 25%,
+		#2c2c2c 25%,
+		#2c2c2c 50%,
+		#333333 50%,
+		#333333 75%,
+		#2c2c2c 75%,
+		#2c2c2c
+	); /* Серый с полосками */
+	border: 2px solid #c91f19;
+	border-radius: 50px; /* Овальная форма */
+	text-decoration: none;
+	transition: background-color 0.3s ease, border-color 0.3s ease;
+	background-size: 5px 5px; /* Размер повторения полосок, стал меньше */
+}
+
+.oval-btn:hover {
+	background-color: #c91f19; /* Цвет при наведении */
+	border-color: #c7201b; /* Изменение цвета границы при наведении */
+}
+.rectangle-container {
+	display: flex;
+	justify-content: center; /* Выравнивание по центру */
+	align-items: center; /* Вертикальное выравнивание по центру */
+	margin-top: 20px;
+}
+
+.red-rectangle {
+	width: 20px; /* Ширина прямоугольника */
+	height: 40px; /* Высота прямоугольника */
+	border: 3px solid red; /* Красный цвет */
+	border-radius: 10px; /* Закругление углов на 10px */
+	position: relative;
+	margin: 0 auto; /* Центрируем прямоугольник */
+}
+
+.circle {
+	width: 10px; /* Ширина круга */
+	height: 10px; /* Высота круга */
+	border-radius: 50%; /* Делает элемент кругом */
+	background-color: red; /* Цвет круга */
+	position: absolute; /* Позволяет позиционировать круг внутри родительского контейнера */
+	top: 5px; /* Отступ сверху от верхней части прямоугольника */
+	left: calc(50% - 5px); /* Центрирует круг по горизонтали */
+}
+
+/* Контейнер для галочек */
+.checkmarks-container {
+	display: flex; /* Используем flexbox для расположения галочек */
+	flex-direction: column; /* Вертикальное расположение */
+	align-items: center; /* Центрируем по горизонтали */
+}
+
+/* Стили для галочек */
+.scroll {
+	width: 20px; /* Ширина галочки равна ширине прямоугольника */
+	height: 20px; /* Высота галочки */
+	position: relative;
+	margin: 5px auto; /* Отступ между галочками */
+	box-sizing: border-box;
+	transition: transform 0.3s; /* Плавный переход для анимации */
+}
+
+/* Галочка */
+.scroll::before {
+	content: "";
+	position: absolute;
+	top: 7px; /* Центрируем галочку по вертикали */
+	left: 5px; /* Центрируем по горизонтали */
+	width: 10px; /* Ширина для галочки */
+	height: 10px; /* Высота для галочки */
+	border-left: 2px solid #9e9e9e;
+	border-bottom: 2px solid #9e9e9e;
+	transform: rotate(-45deg);
+	transition: transform 0.3s; /* Плавный переход для галочки */
+}
+
+/* Анимация при наведении на контейнер */
+.checkmarks-container:hover .scroll {
+	animation: down 0.5s forwards; /* Анимация при наведении на контейнер */
+}
+
+/* Движение вниз */
+@keyframes down {
+	0% {
+		transform: translateY(0); /* Начальная позиция */
+	}
+	20% {
+		transform: translateY(5px); /* Движение вниз на 5 пикселей */
+	}
+	100% {
+		transform: translateY(0); /* Возвращаемся в исходное положение */
+	}
+}
+
+/* Карточки с марками машин*/
+
+hr {
+	border: none; /* Убираем стандартные стили */
+	height: 1px; /* Высота линии */
+	background-color: #c91f19; /* Цвет линии */
+	opacity: 1;
+}
+
+/*Последняя карточка все марки*/
+.custom-hr {
+	border: none; /* Убираем стандартные границы */
+	height: 1px; /* Устанавливаем высоту */
+	background-color: #fff; /* Цвет фона (белый) */
+	margin: 20px 0; /* Устанавливаем отступы сверху и снизу */
+	border-radius: 5px; /* Закругляем углы */
+}
+
+.class-hr {
+	border: none; /* Убираем стандартные границы */
+	height: 1px; /* Устанавливаем высоту */
+	background-color: #c91f19; /* Цвет фона (белый) */
+	margin: 20px 0; /* Устанавливаем отступы сверху и снизу */
+	border-radius: 5px; /* Закругляем углы */
+	width: 200px;
+}
+
+/* Логотип */
+.logo-container {
+	position: relative;
+	z-index: 3; /* Логотип поверх затемнения */
+}
+
+.card {
+	border: none; /* Без границ карточек */
+	border-radius: 5px;
+	min-height: 120px;
+	background-color: #fcfcfc;
+	border: 1px solid #d9d9d9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col-md-2 .card {
+	border: none; /* Без границ карточек */
+	border-radius: 5px;
+	min-height: 100px;
+	background-color: #fcfcfc;
+	border: 1px solid #d9d9d9;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+	margin-bottom: 0; /* Убираем отступы снизу у параграфа */
+}
+
+.card-divider {
+	border: none; /* Убираем стандартный стиль */
+	border-top: 5px solid #c5211e; /* Цвет и высота линии */
+	border-radius: 5px 5px 0 0;
+	margin: 0; /* Убираем отступы */
+	opacity: 1;
+}
+
+.card img {
+	max-width: 100%;
+	height: auto;
+}
+
+.card a {
+	color: #6c757d; /* Цвет текста ссылки */
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.card a:hover {
+	text-decoration: underline;
+}
+
+.promo-block {
+	width: 100%;
+}
+
+.promo-title {
+	font-family: "Arial", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	display: flex;
+	align-items: center;
+}
+
+.promo-contact {
+	font-family: "Arial", sans-serif;
+	display: flex;
+	align-items: center;
+}
+
+.question-circle {
+	width: 24px;
+	height: 24px;
+	border: 1px solid #c91f19;
+	border-radius: 50%;
+	color: #c91f19;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}
+
+.dotted-line {
+	position: relative;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.small-dot {
+	background-color: #c91f19;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin-right: 10px; /* Отступ от кружка до линии */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+	background-color: gray; /* Цвет стрелок */
+	padding: 10px; /* Отступ вокруг стрелок */
+}
+
+/* Создаем класс col-lg-1-5 для 8 колонок */
+@media (min-width: 992px) {
+	.col-lg-1-5 {
+		flex: 0 0 12.5%; /* 1/8 от ширины строки */
+		max-width: 12.5%; /* Максимальная ширина 12.5% */
+	}
+}
+
+.custom-card {
+	height: 60px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.custom-card-body {
+	padding: 15px; /* Уменьшенный отступ */
+}
+
+.custom-card-title {
+	font-size: 16px;
+	text-align: left; /* Текст по левому краю */
+}
+
+.phone-icon-container {
+	display: none;
+}
+
+/* Скрываем иконку телефона на ПК */
+.phone-icon-container {
+	display: none;
+}
+
+/* Контакты*/
+
+footer {
+	background-color: #fff;
+	padding: 20px;
+	background-image: url("../images/Section.png"); /*  Добавьте эту строку */
+	background-size: cover; /*  Или contain, или 100% 100%, в зависимости от желаемого эффекта */
+	background-repeat: no-repeat; /*  Чтобы изображение не повторялось */
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-section {
+	/*  Базовые стили для каждой секции */
+	display: flex;
+	align-items: center;
+}
+
+.social-icons img {
+	margin-right: 10px;
+}
+
+.right-align {
+	text-align: right; /* Выравнивание текста по правому краю */
+}
+
+.right-align p {
+	margin-bottom: 5px; /*  Небольшое расстояние между строками */
+}
+
+.quick-request {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #ff0000;
+	border-radius: 30px;
+	color: #fff;
+	text-decoration: none;
+	width: 200px;
+}
+
+.footer-section {
+	display: flex;
+	align-items: center;
+	margin-right: 20px; /*  Добавлен отступ справа */
+}
+
+/* Карта */
+.responsive-iframe {
+	border-radius: 44px;
+}
+
+@media (max-width: 768px) {
+	footer .row {
+		flex-direction: column;
+	}
+	.contacts-info,
+	.responsive-iframe {
+		order: 0;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.footer-content {
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer-section {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	.right-align {
+		text-align: center;
+		margin-top: 0;
+	}
+	.text-center {
+		margin-bottom: 20px;
+	}
+}
+
+.hidden-card {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.hidden-card {
+		display: block;
+	}
+}
+#MoreBtn {
+	width: 100%;
+}
+
+#InfoMore {
+	width: 100%;
+}
+
+/* Раздел фото*/
+
+.container-fluid {
+	background-image: url("../images/2026.png");
+}
+
+/* Стили для десктопной версии */
+@media (min-width: 768px) {
+	.carousel-inner .carousel-item .desktop-carousel {
+		display: flex;
+		justify-content: space-between; /* Равномерное распределение с промежутками */
+	}
+
+	.carousel-inner .carousel-item .desktop-carousel img {
+		width: 23%; /* Уменьшаем ширину картинок */
+		margin-right: 1%; /* Задаем расстояние между картинками */
+	}
+
+	.mobile-carousel {
+		display: none;
+	}
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 767px) {
+	.carousel-inner .carousel-item .mobile-carousel {
+		width: 100%;
+		margin-bottom: 10px; /* Добавляем отступ снизу */
+	}
+
+	.desktop-carousel {
+		display: none !important;
+	}
+}
+
+/* Стили для мобильных устройств (по умолчанию) */
+.modal-body > div:nth-child(1) {
+	/* Выбираем первый div внутри modal-body */
+	order: 1;
+}
+.modal-body > div:nth-child(2) {
+	/* Выбираем второй div внутри modal-body */
+	order: 2;
+}
+
+/* Стили для ПК (экраны 768px и больше) */
+@media (min-width: 768px) {
+	.modal-body > div:nth-child(1) {
+		order: 2;
+	}
+	.modal-body > div:nth-child(2) {
+		order: 1;
+	}
+}
+
+/*Nav Bar*/
+.black-rectangle {
+	background-color: #000; /* Черный фон */
+	padding: 20px; /* Отступы внутри элемента */
+	border-radius: 0; /* Прямоугольная форма */
+	width: 100%; /* Ширина на всю страницу */
+	margin-bottom: 0; /* Убираем отступ снизу */
+	height: 100px;
+}
+.text-light {
+	color: white; /* Цвет текста для лучшего контраста */
+}
+
+.burger-menu {
+	width: 50px; /* Ширина бургер-меню */
+	height: 50px; /* Высота бургер-меню */
+}
+
+@media (min-width: 767px) {
+	.modal-dialog {
+		max-width: 350px; /* Ширина модального окна на мобильных */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+/* Для десктопа оставляем ширину как есть */
+@media (min-width: 768px) {
+	.modal-dialog {
+		max-width: 800px; /* Ширина модального окна на ПК */
+	}
+}
